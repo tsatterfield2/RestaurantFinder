@@ -148,6 +148,10 @@ a:active {
     flex-direction: column;
   }
 
+  .restaurant-box {
+    width: 90%;
+  }
+
   a {
     width: 100%;
   }
