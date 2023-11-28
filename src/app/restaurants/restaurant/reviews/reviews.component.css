@@ -1,0 +1,104 @@
+a {
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  padding: 5px 40px;
+  margin: 5px;
+  color: rgb(51, 51, 51);
+  background-color: #fff;
+  border-radius: 50px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  transition: ease-in-out all 0.3s;
+}
+
+a:hover,
+a:active {
+  transform: scale(1.05);
+}
+
+.reviews {
+  min-height: content;
+  color: rgb(51, 51, 51);
+  background-color: #c5c5c5;
+  border-radius: 0 0 2% 2%;
+  padding: 10px;
+}
+
+.reviews-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.review-pages {
+  display: flex;
+}
+
+.review-count {
+  align-self: center;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.review-text {
+  font-size: 80%;
+  width: 60%;
+  font-style: italic;
+}
+
+.reviews-title {
+  text-decoration: underline;
+}
+
+.review-info {
+  margin-left: 10px;
+}
+
+.review-content {
+  color: rgb(51, 51, 51);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.checked {
+  color: orange;
+}
+
+.vertical-line {
+  border-left: 1px solid #000;
+}
+
+@media screen and (max-width: 700px) {
+  a {
+    padding: 5px 10px;
+  }
+
+  .review-content {
+    padding: 2.5px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .review-text {
+    margin-left: 10px;
+  }
+  .meta-info {
+    margin-right: 10px;
+  }
+
+  .review-pages p {
+    margin-right: 0;
+  }
+
+  .reviews {
+    padding: 5px;
+  }
+}

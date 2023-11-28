@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="restaurant-box">
+  <div class="restaurant-header">
+    <div class="restaurant-header-name">
+      <h2 class="restaurant-name">{{ restaurant.name }} <span class="restaurant-open-now">- {{ restaurant.hours.open_now ? 'Open' : 'Closed' }}</span></h2>
+    </div>
+    <div class="restaurant-links">
+      <a class="fa" *ngIf="restaurant.websiteURL" href="{{ restaurant.websiteURL }}" target="_blank">View Website</a>
+      <a class="fa" href="{{ restaurant.googleURL }}" target="_blank">View on Google</a>
+    </div>
+    <div class="restaurant-delete-box" (click)="onRemoveRestaurant()">
+      <i class="fa fa-trash trash-icon"></i>
+    </div>
+  </div>
+  <div class="restaurant-info">
+    <div class="restaurant-info-content">
+      <div>
+        <h3>{{ restaurant.address }}</h3>
+        <h4 class="restaurant-phone">{{ restaurant.phone }}</h4>
+      </div>
+      <div>
+        <div class="restaurant-rating">
+          <p class="restaurant-rating-title">Rating:</p>
+          <div>
+            <span class="fa fa-star icons" *ngFor="let star of CreateRatingArray()" [ngClass]="{ schecked : star === 1 }">
+            </span>
+            <span *ngIf="CreateRatingArray().length > 0" class="total-ratings">({{ restaurant.rating.total_votes }})</span>
+            <p *ngIf="CreateRatingArray().length === 0">No rating available</p>
+          </div>
+        </div>
+        <div class="restaurant-price-rating">
+          <p class="restaurant-price-rating-title">Price:</p>
+          <div>
+            <span class="fa fa-money icons" *ngFor="let money of CreatePriceArray()" [ngClass]="{ pchecked : money === 1 }">
+            </span>
+            <p *ngIf="CreatePriceArray().length === 0">No price reference available</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="restaurant-hours-photos">
+      <div *ngIf="restaurant.hours">
+        <h4>Hours:</h4>
+        <hr>
+        <p *ngFor="let operationHour of restaurant.hours.operation_hours" [ngClass]="{'bold-day': currentDay === GetDayIndex(operationHour.split(':')[0].trim())}" class="restaurant-operation-hours">{{ operationHour }}</p><br>
+      </div>
+      <app-photos *ngIf="restaurant.photos" class="restaurant-photos" [photos]="restaurant.photos"></app-photos>
+    </div>
+  </div>
+  <app-reviews *ngIf="restaurant.reviews.length > 0" [reviews]="restaurant.reviews"></app-reviews>
+</div>

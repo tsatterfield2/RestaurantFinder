@@ -1,0 +1,220 @@
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(src\app\header\hero.jpg);
+  height: 100vh;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h1,
+h3,
+h4 {
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+h1,
+h3 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 200%;
+}
+
+h3 {
+  font-size: 125%;
+}
+
+h4 {
+  padding-top: 8px;
+  font-size: 135%;
+}
+
+.header-display {
+  padding-top: 12.5%;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #cacaca;
+  box-shadow: 1px 2px #cacaca;
+  font-size: 200%;
+  background-color: transparent;
+  color: #cacaca;
+}
+
+.header-buttons {
+  margin: 35px 0 0 30%;
+  display: flex;
+  width: 40%;
+  justify-content: space-evenly;
+}
+
+.header-location {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.header-change-btn {
+  width: 40%;
+  margin: 10px 0 0 30%;
+}
+
+.text-primary {
+  color: #cacaca !important;
+}
+
+form {
+  width: 75%;
+  margin-right: 0;
+}
+
+button {
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  padding: 10px 50px;
+  color: #cacaca;
+  border: 1px solid #cacaca;
+  border-radius: 50px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  transition: ease-in-out background-color 0.4s, color 0.4s;
+}
+
+.header-input-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-clear-button {
+  box-sizing: border-box;
+  width: auto;
+  justify-self: center;
+  align-self: center;
+  margin: 0;
+  padding: 25px 0;
+  height: 100%;
+  border-radius: 0;
+  width: 5%;
+  border: 1px solid #cacaca;
+  box-shadow: 1px 2px #cacaca;
+}
+
+button:hover,
+button:active {
+  color: #111111;
+  background-color: #cacaca;
+}
+
+.padded {
+  background-color: #1b262c;
+}
+
+.food-btn {
+  font-size: 150%;
+  margin-right: 150px;
+  display: flex;
+  color: #dadada;
+  transition: transform 0.5s, color 0.3s;
+}
+
+.food-btn:hover {
+  color: #fa5d5d;
+  transform: scale(1.25);
+}
+
+.header-error-message {
+  color: red;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-style: italic;
+  width: 20%;
+  margin-top: 20px;
+  margin-left: 40%;
+  text-align: center;
+}
+
+.action-button {
+  width: 40%;
+}
+
+.loading-spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #fa5d5d;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .header-buttons {
+    margin: 35px 0 0 20%;
+    align-items: center;
+    width: auto;
+    width: 60%;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  form {
+    width: 70%;
+  }
+
+  .header-clear-button {
+    width: 10%;
+    padding: 20px 0;
+  }
+
+  .header-buttons {
+    margin: 35px 0 0 10%;
+    align-items: center;
+    width: auto;
+    flex-direction: column;
+    width: 80%;
+    justify-content: space-evenly;
+  }
+
+  .action-button {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header-clear-button {
+    width: 15%;
+    font-size: 80%;
+  }
+
+  .header-change-btn {
+    width: 80%;
+    margin-left: 10%;
+  }
+}

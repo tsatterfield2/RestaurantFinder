@@ -1,0 +1,43 @@
+<header>
+  <div class="header-display">
+    <div class="row">
+      <h1>Find Restauraunts Near You</h1>
+    </div>
+    <div *ngIf="!locationSelected ">
+      <div class="row">
+        <h3>Enter your location to get started:</h3>
+      </div>
+      <div class="row header-input-row">
+        <form #f="ngForm">
+          <input #placesRef="ngx-places" type="text" ngx-gp-autocomplete (onAddressChange)="HandleAddressChange($event)" placeholder="" size="60px" [(ngModel)]="inputValue" required name="ngx-places" />
+        </form>
+        <button class="header-clear-button" type="button" (click)="OnClearLocation()">Clear</button>
+      </div>
+      <div class="header-buttons">
+        <button class="action-button" type="button" (click)="OnSubmit()" [disabled]="!f.valid">Submit</button>
+        <h4>or</h4>
+        <button class="action-button" (click)="OnUseLocation()">Use my location</button>
+      </div>
+      <div *ngIf="errorMessage">
+        <p class="header-error-message">{{ errorMessage }}</p>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="locationSelected && !errorMessage">
+    <div class="header-location">
+      <div>
+        <h3>{{ inputValue }}</h3>
+      </div>
+      <div *ngIf="displayLoading ">
+        <div class="row">
+          <div class="loading-spinner-container">
+            <div class="loading-spinner spinner"></div>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="header-change-btn" (click)="OnReset()">Choose a different location</button>
+    </div>
+    <div class="padded">
+    </div>
+  </div>
+</header>

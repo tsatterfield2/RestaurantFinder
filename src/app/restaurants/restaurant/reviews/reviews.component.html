@@ -1,0 +1,22 @@
+<div class="reviews">
+  <div class="reviews-header">
+    <h3 class="reviews-title">Reviews</h3>
+    <div class="review-pages">
+      <p class="review-count">{{currentReview + 1}} / {{reviews.length}}</p>
+      <a class="fa fa-arrow-left icons" aria-hidden="true" (click)="OnPreviousReview()"></a>
+      <a class="fa fa-arrow-right icons" aria-hidden="true" (click)="OnNextReview()"></a>
+    </div>
+  </div>
+  <div class="review-content">
+    <div class="review-info">
+      <div class="stars">
+        <span class="fa fa-star icons" *ngFor="let star of CreateRatingArray()" [ngClass]="{ checked : star === 1 }">
+        </span>
+      </div>
+      <p class="author">By: {{ reviews[currentReview].authorName}}</p>
+      <p class="time">{{ reviews[currentReview].timeDesc}}</p>
+    </div>
+    <div class="vertical-line"></div>
+    <p class="review-text">"{{ reviews[currentReview].content}}"</p>
+  </div>
+</div>

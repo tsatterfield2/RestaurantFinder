@@ -1,0 +1,7 @@
+<div class="gallery-container">
+  <div class="nav-button" (click)="OnShowPreviousPhoto()" [class.disabled]="currentPhotoIndex === 0">&#9664;</div>
+  <div class="photo-container" (click)="OnPhotoClick(currentPhoto)" *ngIf="currentPhoto">
+    <img class="photo" [src]="currentPhoto.getUrl({ maxWidth: 350 })" alt="Place Photo">
+  </div>
+  <div class="nav-button" (click)="OnShowNextPhoto()" [class.disabled]="currentPhotoIndex === photos.length - 1">&#9654;</div>
+</div>

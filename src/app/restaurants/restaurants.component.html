@@ -1,0 +1,11 @@
+<div *ngIf="restaurantsVisible" #targetElement>
+  <div class="restaurants-block">
+    <h2 class="restaurants-results"> Results Shown: {{restaurants.length}}</h2>
+    <app-restaurant *ngFor="let res of restaurants" [restaurant]="res" (remove)="OnRemoveRestaurant($event)"></app-restaurant>
+    <h3 class="restaurants-none" *ngIf="restaurants.length == 0">No Restaurants to Display</h3>
+    <div class="restaurants-buttons">
+      <button (click)="OnToTop()" class="bottom-btn">To Top</button>
+      <button *ngIf="loadMoreVisible" (click)="OnMore()" class="bottom-btn">Load More</button>
+    </div>
+  </div>
+</div>

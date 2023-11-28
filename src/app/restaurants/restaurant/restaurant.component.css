@@ -1,0 +1,202 @@
+a {
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  padding: 5px 15px;
+  margin: 5px;
+  color: rgb(51, 51, 51);
+  background-color: #fff;
+  border-radius: 50px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  transition: ease-in-out all 0.3s;
+}
+
+a:hover,
+a:active {
+  transform: scale(1.05);
+}
+
+.schecked {
+  color: orange;
+}
+
+.pchecked {
+  color: green;
+}
+
+.restaurant-box {
+  width: 70%;
+  margin: 20px auto;
+  border-radius: 2%;
+}
+
+.restaurant-info {
+  color: rgb(51, 51, 51);
+  background-color: #fff;
+  padding: 20px 30px 10px 30px;
+}
+
+.restaurant-info-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.restaurant-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.icons {
+  margin: 0 2px;
+}
+
+.restaurant-price-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.restaurant-rating-title {
+  margin: 0;
+}
+
+.restaurant-price-rating-title {
+  margin: 0;
+}
+
+.restaurant-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ef4f5f;
+  padding: 20px;
+  color: #fff;
+  border-radius: 2% 2% 0 0;
+}
+
+.restaurant-operation-hours {
+  margin: 0;
+}
+.restaurant-open-now {
+  font-size: 60%;
+}
+
+.restaurant-name {
+  margin: 0 5px;
+}
+
+.bold-day {
+  font-weight: bold;
+}
+
+.restaurant-header-name {
+  display: flex;
+  align-items: baseline;
+  flex: 1 0 auto;
+}
+
+.total-ratings {
+  font-style: italic;
+  font-size: 85%;
+}
+
+.restaurant-hours-photos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.restaurant-delete-box {
+  width: 60px;
+  height: 60px;
+  color: white;
+  margin-left: 10px;
+  display: flex;
+  border: white;
+  border: 2px solid white;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.restaurant-links {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurant-delete-box:hover {
+  background-color: #aa3a45;
+}
+
+.trash-icon {
+  font-size: 20px;
+}
+
+.restaurant-phone {
+  font-weight: normal;
+}
+
+@media screen and (max-width: 850px) {
+  .restaurant-header {
+    flex-direction: column;
+  }
+
+  a {
+    width: 100%;
+  }
+
+  .restaurant-delete-box {
+    width: 40px;
+    height: 40px;
+    order: -1;
+    align-self: flex-end;
+  }
+
+  .trash-icon {
+    font-size: 20px;
+  }
+
+  .restaurant-info-content {
+    flex-direction: column;
+  }
+
+  .restaurant-hours-photos {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .restaurant-box {
+    width: 95%;
+  }
+
+  .restaurant-hours-photos {
+    font-size: 85%;
+  }
+
+  .restaurant-info {
+    padding: 20px 10px 10px 10px;
+  }
+
+  .restaurant-header {
+    padding: 10px;
+  }
+
+  .restaurant-delete-box {
+    width: 30px;
+    height: 30px;
+    order: -1;
+    align-self: flex-end;
+  }
+
+  .trash-icon {
+    font-size: 15px;
+  }
+}

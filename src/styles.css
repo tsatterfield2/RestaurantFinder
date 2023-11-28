@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*
+1b262c
+0f4c75
+00b7c2
+fdcb9e
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+html,
+body {
+  color: #dadada;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.row {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* Screen size adjustments */
+@media screen and (max-width: 992px) {
+  body {
+      font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+      font-size: 70%;
+  }
+}
