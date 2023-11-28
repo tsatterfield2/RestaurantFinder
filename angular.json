@@ -16,6 +16,7 @@
             "outputPath": "dist/restaurant-finder",
             "index": "src/index.html",
             "main": "src/main.ts",
+            "baseHref": "/restaurant-finder/",
             "polyfills": [
               "zone.js"
             ],
