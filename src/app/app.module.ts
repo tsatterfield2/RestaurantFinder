@@ -13,6 +13,7 @@ import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { RestaurantComponent } from './restaurants/restaurant/restaurant.component';
 import { ReviewsComponent } from './restaurants/restaurant/reviews/reviews.component';
 import { PhotosComponent } from './restaurants/restaurant/photos/photos.component';
+import { APP_BASE_HREF } from '@angular/common';
 
 @NgModule({
   declarations: [
