@@ -53,14 +53,14 @@ export class LocationService {
         (error: GeolocationPositionError) => {
           console.error('Error getting geolocation:', error.message);
           this.errorSubject.next(
-            'Browser finding Geolocation using the Browser.'
+            'Error finding Geolocation using the Browser.'
           );
         }
       );
     } else {
       console.error('Geolocation is not supported by this browser.');
       this.errorSubject.next(
-        'Browser Geolocation is not supported by this browser.'
+        'Error Geolocation is not supported by this browser.'
       );
     }
   }
